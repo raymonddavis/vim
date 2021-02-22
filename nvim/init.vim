@@ -1,5 +1,7 @@
 set exrc " Wont open project .nvimrc without this here
 
+let g:coc_global_extensions = [ 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-angular', 'coc-omnisharp', 'coc-sh', 'coc-json', 'coc-git' ]
+
 call plug#begin('~/.vim/plugged')
 
 " Yes, I am a sneaky snek now
