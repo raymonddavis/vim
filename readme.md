@@ -1,3 +1,9 @@
+> Terminal / Vim Setup
+
+<img src="screenshot.png" width="864">
+
+<br>
+
 This term terminal always refers to wsl Ubuntu 20.04.
 During setup if not using username `cup` there will edits in files to make.
 
