@@ -70,4 +70,4 @@ During setup if not using username `cup` there will edits in files to make.
     - Page Down Until you can hit enter ignore errors
     - `:PlugInstall`
     - Open (`e`) and close (`:q`) nvim until errors are gone
-    - Fix psf/black: pip3 install --upgrade git+https://github.com/psf/black.git
+    - Fix psf/black: `pip3 install --upgrade git+https://github.com/psf/black.git`
