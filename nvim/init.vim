@@ -1,6 +1,6 @@
 set exrc " Wont open project .nvimrc without this here
 
-let g:coc_global_extensions = [ 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-angular', 'coc-omnisharp', 'coc-sh', 'coc-json', 'coc-git' ]
+let g:coc_global_extensions = [ 'coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-angular', 'coc-omnisharp', 'coc-sh', 'coc-json' ]
 
 call plug#begin('~/.vim/plugged')
 
@@ -75,6 +75,7 @@ Plug 'sbdchd/neoformat'
 
 " mine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
