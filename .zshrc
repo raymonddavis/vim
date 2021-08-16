@@ -120,6 +120,10 @@ alias ez="$EDITOR ~/.zshrc"
 alias sz='source ~/.zshrc'
 alias g='cd ~/git'
 alias h='cd ~'
+alias og='cd /mnt/c/Users/ry/git'
+alias oh='cd /mnt/c/Users/ry'
+alias wclip='/mnt/c/Windows/System32/clip.exe'
+alias open='/mnt/c/Windows/explorer.exe'
 
 # pure
 fpath+=$HOME/.zsh/pure
