@@ -21,10 +21,6 @@ Plug 'nvim-treesitter/playground'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 
-" THANKS BFREDL
-" Plug '/home/mpaulson/personal/contextprint.nvim'
-" Plug '/home/mpaulson/personal/af-pluth-pluth'
-
 Plug 'rust-lang/rust.vim'
 Plug 'tweekmonster/gofmt.vim'
 Plug 'tpope/vim-fugitive'
@@ -37,7 +33,6 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'vuciv/vim-bujo'
 Plug 'tpope/vim-dispatch'
 Plug 'theprimeagen/vim-be-good'
-" Plug '/home/theprimeagen/personal/af-pluth-pluth'
 Plug 'gruvbox-community/gruvbox'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-projectionist'
@@ -57,11 +52,7 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug '/home/mpaulson/personal/VimDeathmatch/client'
 
-" HARPOON!!
-" Plug 'ThePrimeagen/harpoon'
-" Plug '/home/mpaulson/personal/rfc-reader'
 Plug 'mhinz/vim-rfc'
 
 " Fire Nvim
@@ -76,6 +67,8 @@ Plug 'sbdchd/neoformat'
 " mine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'kdheepak/lazygit.nvim'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -108,11 +101,33 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " mine
+nnoremap <leader>ft <cmd>Telescope find_files<CR>
 nnoremap <leader>ff :FZF<CR>
 nnoremap <leader>fg :Rg<CR>
-nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>gg :LazyGit<CR>
+nnoremap <silent> <leader>tt :FloatermToggle<CR>
+nnoremap <silent> <leader>lg :FloatermNew lazygit<CR>
+nnoremap <Leader>L "ayiwoconsole.log('<C-R>a:', <C-R>a);<Esc>
+xnoremap <Leader>L "ayoconsole.log('<C-R>a:', <C-R>a);<Esc>
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+endfunction
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
